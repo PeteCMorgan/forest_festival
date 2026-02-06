@@ -1,0 +1,90 @@
+:root {
+  --earth-clay: #C8956B;
+  --earth-moss: #5A6B4C;
+  --earth-sage: #8B9B7F;
+  --earth-bark: #4A3F35;
+  --earth-sand: #E8DCC4;
+  --earth-leaf: #7A8B6F;
+  --earth-cream: #F5F1E8;
+  --earth-soil: #3D3228;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Darker Grotesque', sans-serif;
+  color: var(--earth-soil);
+  background: linear-gradient(rgba(245, 241, 232, 0.85), rgba(245, 241, 232, 0.88)),
+              url('https://images.unsplash.com/photo-1560493676-04071c5f467b?w=1600&q=80') fixed center/cover;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+h1 {
+  font-family: 'Crimson Text', serif;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+h2 {
+  font-family: 'Crimson Text', serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--earth-moss);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(to right, var(--earth-clay), transparent);
+}
+
+h3 {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.8rem;
+  color: var(--earth-moss);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--earth-moss);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--earth-clay);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem 1rem;
+  }
+}
